@@ -1,0 +1,48 @@
+.mat-drawer-container{
+    height: 100vh;
+}
+
+.menu-icon{
+    cursor: pointer;
+}
+
+.sidenav{
+    width: 300px;
+}
+
+.logo-container{
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding:0 16px 0 16px;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items{
+    padding:0;
+    margin: 0;
+
+    mat-icon{
+        margin-right:16px;
+    }
+
+    li {
+        padding:0 16px 0 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 250ms ease;
+        &:hover{
+            background-color: rgba(0,0,0,0.15);
+            transition: all 250ms ease;
+        }
+        &:focus{
+            background-color: rgba(0,0,0,0.15);
+        }
+    }
+}
+
+.router-container{
+    padding:16px 48px;
+}
