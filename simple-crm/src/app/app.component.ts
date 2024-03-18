@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatNativeDateModule,
     FormsModule,
     AngularFireModule,
-    AngularFirestoreModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
