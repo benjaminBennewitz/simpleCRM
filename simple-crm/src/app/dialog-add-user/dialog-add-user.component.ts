@@ -28,8 +28,25 @@ export class DialogAddUserComponent {
   user = new User();
   birthDate!: Date;
   firestore: Firestore = inject(Firestore);
+  items$;
+  items;
 
   constructor() {
+    this.items$ = collectionData(this.getUsersRef());
+    this.items = this.items$.subscribe((list) => {
+      list.forEach(user => {
+        console.log(user);
+      })
+    });
+    this.items.unsubscribe();
+  }
+
+  getUsersRef(){
+    return collection(this.firestore, 'users');
+  }
+
+  getSingleUser(colId:string, docId:string){
+    return doc (collection(this.firestore, colId), docId);
   }
 
   convertDate() {
